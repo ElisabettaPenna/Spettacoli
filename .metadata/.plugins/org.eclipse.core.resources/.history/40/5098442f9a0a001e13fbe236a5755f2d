@@ -1,0 +1,30 @@
+package com.example.demo.info;
+
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SpettacoloInfo {
+
+	@JsonInclude(Include.NON_NULL)
+	private String idSpettacolo;
+	
+	@JsonInclude(Include.NON_NULL)
+	private String artista;
+	
+	@JsonInclude(Include.NON_NULL)
+	private Date dataSpettacolo;
+
+	@JsonInclude(Include.NON_NULL)
+	private String citta;
+	
+	@JsonInclude(Include.NON_NULL)
+	private String luogo;
+	
+	@JsonInclude(Include.NON_NULL)
+	private double prezzo;
+	
+	@JsonInclude(Include.NON_NULL)
+	private int postiDisp;
+}

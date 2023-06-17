@@ -1,0 +1,49 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.Biglietto;
+import com.example.demo.repository.IBigliettoRepository;
+
+@Service
+public class BigliettoService implements IBigliettoService{
+
+	@Autowired
+	private IBigliettoRepository biglRepo;
+	
+	@Override
+	public List<Biglietto> getAllBiglietti() {
+		List<Biglietto> biglietti = new ArrayList<>();
+		biglRepo.findAll().forEach(b->biglietti.add(b));
+		return biglietti;
+	}
+
+	@Override
+	public Biglietto getBigliettoByCodOperazione(int codOperazione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean existsBigliettoByCodOperazione(int codOperazione) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean addBiglietto(Biglietto biglietto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateBiglietto(Biglietto biglietto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
