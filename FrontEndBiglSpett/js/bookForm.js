@@ -39,7 +39,7 @@ function createBooking() {
     })
     .then(response => {
         if(response.status == 201) {
-            alert('hai acquistato un articolo!')
+            alert('hai prenotato un biglietto!')
         }else if(response.status == 403){
             alert("Numero sbagliato!")
         } else {
